@@ -1,10 +1,16 @@
 import './App.css';
+import { Routes, Route, Link} from "react-router-dom";
 
-function App() {
+//VIEWS
+import Home from './views/Home';
+
+const App = () => {
   return (
+    <Routes>
     <div className="App">
-      <h2>im the header two</h2>
+      <Route path="/details" strict element={<Home/>} />
     </div>
+    </Routes>
   );
 }
 
