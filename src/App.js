@@ -1,16 +1,19 @@
 import './App.css';
-import { Routes, Route, Link} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
-//VIEWS
+//IMPORT
 import Home from './views/Home';
 
 const App = () => {
   return (
-    <Routes>
     <div className="App">
-      <Route path="/details" strict element={<Home/>} />
+    <BrowserRouter>
+      <Routes>
+      <Route path="/" exact element={<Home/>} />
+      <Route path="/about" exact element={<h2>this is about</h2>} />
+      </Routes>
+    </BrowserRouter>
     </div>
-    </Routes>
   );
 }
 

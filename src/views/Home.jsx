@@ -1,8 +1,17 @@
 import React from "react"
 
+//STYLES
+
+//COMPONENTS
+import Header from "../components/Header"
+import Form from "../components/Form"
+
 const Home = () => {
     return (
-            <h2>Home</h2>
+        <div className="home-container">
+            <Header />
+            <Form/>
+        </div>
     )
 }
 export default Home
