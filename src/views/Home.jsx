@@ -1,16 +1,23 @@
-import React from "react"
+import React, {useState,useEffect} from "react"
 
-//STYLES
+//STYLES import "./"
 
 //COMPONENTS
 import Header from "../components/Header"
 import Form from "../components/Form"
 
+
 const Home = () => {
+
+    const handleGithubUser = (e) => {
+        console.log(e.target.value)
+    }
+
+
     return (
         <div className="home-container">
             <Header />
-            <Form/>
+            <Form handleGithubUser={handleGithubUser}/>
         </div>
     )
 }
